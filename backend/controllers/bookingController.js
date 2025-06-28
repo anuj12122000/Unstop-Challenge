@@ -1,5 +1,5 @@
 const pool = require('../db');
-const { calcTravelTime } = require('../utils/travelTime');
+const { calcTravelTime } = require('../utils/traveltime');
 
 exports.bookRooms = async (req, res) => {
   const n = parseInt(req.body.count);
