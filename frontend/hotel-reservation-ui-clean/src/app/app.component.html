@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Hotel Room Reservation</h1>
+
+  <div class="form">
+    <input type="number" [(ngModel)]="count" min="1" max="5" />
+    <button (click)="bookRooms()">Book</button>
+    <button (click)="randomize()">Random Occupancy</button>
+    <button (click)="reset()">Reset All</button>
+  </div>
+
+  <div class="grid">
+    <div
+      *ngFor="let room of rooms"
+      [ngClass]="{ booked: room.is_booked, available: !room.is_booked }"
+    >
+      {{ room.room_number }}
+    </div>
+  </div>
+</div>
